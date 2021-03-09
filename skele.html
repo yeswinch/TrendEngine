@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}dd
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+#search{
+	text-align:center;
+}
+h2 {text-align: center;}
+p {text-align: center;}
+
+.TrendingDepartments {
+  text-align: center;
+}
+.logo {
+  display: block;
+  margin-left:auto;
+  margin-right: auto;
+}
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">Home </a>
+  <a href="#results">Results</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">Categories</button>
+  <div class="dropdown-content">
+    <a href="skele_csjw.html">Clothing, Shoes, Jewelry & Watches</a>
+    <a href="#">Home, Garden & Tools</a>
+    <a href="#">Books & Audible</a>
+    <a href="#">Movies, Music & Games</a>
+    <a href="#">Electronics, Computers & Office</a>
+    <a href="#">Home, Garden & Tools</a>
+    <a href="#">Pet Supplies</a>
+    <a href="#">Food & Grocery</a>
+    <a href="#">Beauty & Health</a>
+    <a href="#">Toys, Kids & Baby</a>
+    <a href="#">Handmade</a>
+    <a href="#">Sports & Outdoors</a>
+    <a href="#">Automotive & Industrial</a>
+  </div>
+  </div>
+
+<img src="logo3.jpeg" alt="TopTrend" class="logo">
+
+<div style="padding-left;:16px">
+
+  <div id="search">
+    <input id ="search_bar"type="text" placeholder="Search..">
+    <button id="Go">Go</button>
+  </div>
+</div>
+
+
+<script>
+  document.getElementById("Go").addEventListener("click", goFunction);
+
+  function goFunction() {
+    localStorage["searchText"] = document.getElementById("search_bar").value;
+    window.location.href = "skele_results.html"
+  }
+</script>
+
+
+
+<div class="TrendingDepartments">
+  <p>Categories Trending Right Now</p>
+  <button>
+    <a href="#videogames">Video Games</a>
+  </button>
+  
+  <button>Clothing, Shoes & Jewelry</button>
+  <button>Toys & Games</button>
+</div>
+
+<div class="TrendingDepartments">
+  <button>Camera & Photo</button>
+  <button>Clothing, Shoes & Jewelry</button>
+  <button>Books</button>
+</div>
+
+</body>
+</html>
